@@ -34,9 +34,9 @@ while(cap.isOpened()):
     
     mask1 = mask1 + mask2
     
-    mask1 = cv2.morphylogyEx((mask1, cv2.MORPH_OPEN, np.ones(3,3)), np.unit8 ,iterations=2)
+    mask1 = cv2.morphologyEx((mask1, cv2.MORPH_OPEN, np.ones(3,3)), np.unit8 ,iteration=2)
     
-    mask1 = cv2.morphylogyEx((mask1, cv2.MORPH_DILATE, np.ones(3,3)), np.unit8 , iteration =1)
+    mask1 = cv2.morphologyEx((mask1, cv2.MORPH_DILATE, np.ones(3,3)), np.unit8 , iteration =1)
     
     mask2 = cv2.bitwise_not(mask1)
     
